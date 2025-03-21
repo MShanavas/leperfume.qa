@@ -41,6 +41,21 @@ ul li {
     font-size: 1.1rem;
 }
 
+/* Updated styling for contact info */
+.main-content p {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+}
+
+.main-content a {
+    color: #8a4af3;
+    text-decoration: none;
+}
+
+.main-content a:hover {
+    text-decoration: underline;
+}
+
 .cta-button {
     display: inline-block;
     background-color: #ff6f61;
@@ -49,7 +64,7 @@ ul li {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .cta-button:hover {
