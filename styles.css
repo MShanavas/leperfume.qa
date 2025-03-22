@@ -29,7 +29,7 @@ header p {
 .hero {
     position: relative;
     padding: 4rem 1rem;
-    background: url('https://unsplash.com/photos/2H_8WbVPRxM/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8cGVyZnVtZXxlbnwwfHx8fDE3NDI1MzIzNzB8MA&force=true?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+    background: url('https://github.com/MShanavas/leperfume.qa/blob/main/laura-chouette-2H_8WbVPRxM-unsplash.jpg?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
