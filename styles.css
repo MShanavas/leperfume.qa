@@ -1,34 +1,85 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f5f6;
     color: #333;
     text-align: center;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: #8a4af3;
+    background: linear-gradient(135deg, #8a4af3, #d47fa6);
     color: white;
-    padding: 2rem;
+    padding: 3rem 1rem;
+    position: relative;
 }
 
 header h1 {
+    font-size: 3rem;
     margin: 0;
-    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
-.main-content {
+/* Hero Section with Fragrance Image */
+.hero {
+    position: relative;
+    padding: 4rem 1rem;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image.fragrance-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: mist 10s infinite alternate;
+}
+
+@keyframes mist {
+    0% { opacity: 0.2; transform: scale(1); }
+    100% { opacity: 0.4; transform: scale(1.05); }
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #ffdbac;
+}
+
+.hero p {
+    font-size: 1.3rem;
+}
+
+/* Section Styling with Transitions */
+.features, .benefits, .importance, .contact {
     padding: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.main-content h2 {
+.features.visible, .benefits.visible, .importance.visible, .contact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.features h3, .benefits h3, .importance h3, .contact h3 {
     color: #8a4af3;
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 ul {
@@ -37,22 +88,26 @@ ul {
 }
 
 ul li {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
-}
-
-/* Updated styling for contact info */
-.main-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 0.8rem 0;
+    padding-left: 20px;
+    position: relative;
 }
 
-.main-content a {
+ul li:before {
+    content: "✨";
+    position: absolute;
+    left: 0;
+    color: #ff6f61;
+}
+
+/* Contact Section */
+.contact a {
     color: #8a4af3;
     text-decoration: none;
 }
 
-.main-content a:hover {
+.contact a:hover {
     text-decoration: underline;
 }
 
@@ -64,18 +119,28 @@ ul li {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2rem;
-    margin-top: 1.5rem;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #e65b50;
+    transform: scale(1.05);
 }
 
+.cta-button.whatsapp {
+    background-color: #25D366;
+}
+
+.cta-button.whatsapp:hover {
+    background-color: #20b858;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
 }
