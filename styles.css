@@ -26,15 +26,17 @@ body::before {
     text-align: center;
     position: relative;
     z-index: 2;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 10vw; /* Scales with viewport width for mobile */
     font-family: 'Arial', sans-serif;
     color: #fff;
     text-shadow: 3px 3px 10px rgba(255, 215, 0, 0.8);
     margin-bottom: 40px;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 .whatsapp-btn {
@@ -43,18 +45,32 @@ h1 {
     justify-content: center;
     background-color: #25D366;
     color: white;
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 15px 25px;
+    font-size: clamp(16px, 4vw, 20px); /* Responsive font size */
     text-decoration: none;
     border-radius: 50px;
     transition: transform 0.3s ease;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .whatsapp-btn img {
-    width: 30px;
+    width: clamp(25px, 6vw, 30px); /* Responsive icon size */
     margin-right: 10px;
 }
 
 .whatsapp-btn:hover {
     transform: scale(1.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 12vw; /* Larger on smaller screens */
+        margin-bottom: 30px;
+    }
+    .whatsapp-btn {
+        padding: 12px 20px;
+        max-width: 80%; /* Prevents overflow on small screens */
+    }
 }
